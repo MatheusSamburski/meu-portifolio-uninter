@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/background.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    line-height: 160%;
+}
+
+header {
+    padding: 32px;
+    height: calc(120px + 30px);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform 0.3s;
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    margin-top: 32px;
+}
+
+.container-infos {
+    color: white;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    padding-top: 4px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.container-infos div {
+    background-color: #2a2634;
+    padding: 24px 32px 32px 32px;
+    border-radius: 8px;
+}
+
+.container-infos h2 {
+    letter-spacing: -0.47px;
+}
+
+.container-infos p {
+    letter-spacing: -0.18;
+    color: #a1a1aa;
+}
+
+.container-infos ul li {
+    transition: transform 0.3s;
+}
+
+.container-infos ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #443e54;
+}
+
+/* ANIMATIONS */
+
+header div {
+    animation: fromTop 0.7s 0.2s backwards;
+}
+
+main section {
+    animation: fromBotton 0.7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0s;
+}
+
+main section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px 35px;
+    background-color: #2a2634;
+    border-radius: 8px;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links a button {
+    background-color: #9572fc;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.links a button:hover {
+    transform: scale(1.1);
+}
+
+.container-training {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-inputs .label-and-input {
+    display: flex;
+    gap: 10px;
+    padding: 0 !important;
+}
+
+.container-inputs .label-and-input input {
+    border-radius: 8px;
+    padding: 0 5px;
+    border: 0;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBotton {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
